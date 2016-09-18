@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <title>Test</title>
+    <!-- Assets -->
+    <link href="app/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="app/bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="app/Assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+<!-- Header -->
+<nav role="navigation" class="navbar navbar-default">
+    <a href="#" class="navbar-brand">
+        <i class="fa fa-windows"></i>Application de test | Coemygroup
+    </a>
+</nav>
+<div class="wrapper">
+    <div ng-app="Main">
+        <!-- Menu -->
+        <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="list-group">
+                <a ng-class="getClass('#/')" href="#/" class="list-group-item">
+                    <i class="fa fa-home"></i>Accueil
+                </a>
+                <a ng-class="getClass('#/spain')" href="#/spain" class="list-group-item">
+                    <i class="fa fa-flag-o"></i>Espagne : Liga BBVA
+                </a>
+                <a  ng-class="getClass('#/frensh')" href="#/frensh" class="list-group-item">
+                    <i class="fa fa-flag-o"></i>France : Ligue 1
+                </a>
+            </div>
+        </div>
+        <!-- View -->
+        <div ng-view class="col-lg-9 col-md-9 col-sm-12 check-element sample-show-hide"></div>
+    </div>
+</div>
+<!-- Scripts -->
+<script src="app/bower_components/angular/angular.js"></script>
+<script src="app/bower_components/angular-route/angular-route.js"></script>
+<script src="app/app.js"></script>
+<script src="app/Controllers/mainController.js"></script>
+<script src="app/Controllers/spainController.js"></script>
+<script src="app/Controllers/frenshController.js"></script>
+<script src="app/Controllers/infoController.js"></script>
+
+</body>
+</html>

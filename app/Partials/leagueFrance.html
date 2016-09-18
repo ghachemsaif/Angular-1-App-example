@@ -1,0 +1,25 @@
+<div class="title-header col-lg-12">
+    <div class="col-lg-2">
+        <img src="{{ feed.channel.image.url }}">
+    </div>
+    <div class="col-lg-10">
+        <h3>{{feed.channel.title}}</h3>
+    </div>
+</div>
+
+<div class="wrapper">
+    <ul class="col-lg-12 col-md-12 col-sm-12 list_style">
+        <div ng-show="loading" class="loader_gif"></div>
+        <li ng-repeat="item in feed.channel.item">
+            <a href="#/infos?link={{item.link}}">
+                <div class="left">
+                    <p>{{item.title}}</p>
+                </div>
+                <div class="right">
+                    <p ng-bind="formatDate(item.pubDate) |  date:'dd/MM/yyyy'"></p>
+                    <p ng-bind="formatDate(item.pubDate) |  date:'HH:mm'" > </p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
